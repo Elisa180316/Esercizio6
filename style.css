@@ -1,0 +1,148 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #171717;
+  font-family: sans-serif;
+  min-height: 100vh;
+
+}
+
+.box {
+  width: 436px;
+  height: 621px;
+  position: relative;
+  border-width: 50px;
+  border: 30px solid white;
+  background-color: white;
+  display: flex;
+  z-index: 1;
+
+}
+
+.box img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  opacity: 0;
+  z-index: 2;
+}
+
+.box:hover::before {
+  opacity: 0.4;
+}
+
+.box .save {
+  background-color: red;
+  color: white;
+  font-weight: 900;
+  text-align: center;
+  top: 35px;
+  left: 303px;
+  border-radius: 20px;
+  position: relative;
+  height: 30px;
+  width: 20%;
+  padding: 5px 10px 5px 10px;
+  z-index: 3;
+  display: none;
+
+
+}
+
+.box:hover .save {
+  display: block;
+}
+
+.box:hover .link {
+  display: block;
+}
+
+.box:hover .share {
+  display: block;
+}
+
+.box:hover .dots {
+  display: block;
+}
+
+
+
+
+
+
+.link {
+  position: relative;
+  display: none;
+  background-color: white;
+  color: black;
+  font-weight: 900;
+  text-align: center;
+  bottom: -564px;
+  left: -93px;
+  border-radius: 20px;
+  height: 27px;
+  width: 31%;
+  padding: 5px 10px 5px 10px;
+
+  z-index: 3;
+}
+
+
+
+.share {
+  position: relative;
+  background-color: white;
+  color: black;
+  font-weight: 900;
+  text-align: center;
+  bottom: -564px;
+  left: 12px;
+  border-radius: 20px;
+  height: 27px;
+  width: 8%;
+  padding: 5px 10px 5px 10px;
+  display: none;
+  z-index: 3;
+
+}
+
+
+
+.dots {
+  position: relative;
+  background-color: white;
+  color: black;
+  font-weight: 900;
+  text-align: center;
+  bottom: -564px;
+  left: 40px;
+  border-radius: 20px;
+  height: 27px;
+  width: 8%;
+  padding: 5px 10px 5px 10px;
+  display: none;
+  z-index: 3;
+
+}
+
+
+
+#icons div {
+  position: absolute;
+  opacity: 0.7;
+  z-index: 3;
+}
